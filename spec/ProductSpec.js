@@ -3,7 +3,7 @@ describe("Product", function() {
 	
 	beforeEach(function(){
 
-		product = new Product("Almond Toe Court Shoes, Patent Black");
+		product = new Product("Almond Toe Court Shoes, Patent Black", "Women’s Footwear", 99.0, 5);
 
 	});
 
@@ -15,5 +15,28 @@ describe("Product", function() {
 
 	});
 
+	describe("category", function(){
+
+		it("should know its category", function(){
+			expect(product.category).toEqual("Women’s Footwear");
+		});
+
+	});
+
+	describe("price", function(){
+
+		it("should know its price", function(){
+			expect(product.price).toEqual(99.0);
+		});
+
+	});
+
+	describe("stock", function(){
+
+		it("should know its stock", function(){
+			expect(product.stock).toEqual(5);
+		});
+
+	});
 
 })
